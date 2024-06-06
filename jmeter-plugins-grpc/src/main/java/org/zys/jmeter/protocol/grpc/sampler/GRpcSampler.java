@@ -43,7 +43,7 @@ public class GRpcSampler extends AbstractSampler {
             res.setSuccessful(true);
             res.setResponseMessage("OK");
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             res.setResponseData(e.toString(), "UTF-8");
             res.setResponseCode("500");
             res.setSuccessful(false);
